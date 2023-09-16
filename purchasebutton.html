@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Village Marketplace</title>
+    <style>
+/* styles.css */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2Ud_ob19x80-e0b_qZT5dJsBnPn2Y9-8KmA&usqp=CAU);
+    margin: 5px;
+    padding: 5px;
+}
+
+#product, #paymentForm {
+    background-color: plum;
+    margin: 50px;
+    padding: 50px;
+    border: 5px solid #ddd;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6b0c67; /* Darker shade of purple for hover effect */
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Village Marketplace</h1>
+    </header>
+    <section id="product">
+        <h2>Product Name</h2>
+        <p>Description of the product.</p>
+        <p>Price: RWF</p>
+        <button id="purchaseButton">Purchase</button>
+    </section>
+    <section id="paymentForm">
+        <h2>Payment Information</h2>
+        <form id="checkoutForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required><br>
+
+            <label for="cardNumber">Card Number:</label>
+            <input type="text" id="cardNumber" required><br>
+
+            <label for="expiryDate">Expiry Date:</label>
+            <input type="text" id="expiryDate" required><br>
+            <button type="submit">Submit Payment</button>
+        </form>
+    </section>
+    <script > // script.js
+        document.addEventListener("DOMContentLoaded", function () {
+            const purchaseButton = document.getElementById("purchaseButton");
+            const checkoutForm = document.getElementById("checkoutForm");
+        
+            purchaseButton.addEventListener("click", function () {
+                // Add logic here to initiate the purchase process
+                alert("Purchase initiated!");
+            });
+        
+            checkoutForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+                // Add logic here to process the payment
+                // You may use a payment gateway API for real payments
+                alert("Payment submitted! Thank you for your purchase.");
+            });
+        });</script>
+</body>
+</html>
+    
+
+
+
+
+
+
+
